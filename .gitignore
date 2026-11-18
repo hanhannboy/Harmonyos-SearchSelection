@@ -12,3 +12,4 @@
 /.appanalyzer
 /.cache
 .DS_Store
+/build-profile.json5
