@@ -1,4 +1,4 @@
-# 文本选择搜索（ShareRunner）
+# 文本选择搜索（SearchSelection）
 
 一个 HarmonyOS 文本搜索中转应用：在任意应用中选中文字后，通过系统文本选择菜单的「搜索」或分享面板把文字传入本应用，选择搜索引擎即可跳转搜索。搜索引擎支持自定义。
 
@@ -61,7 +61,7 @@ URL 模板需要满足：
 
 ### 3. 从分享面板搜索
 
-选中或分享文字 → 打开系统分享面板 → 选择「ShareRunner」→ 选择搜索引擎。
+选中或分享文字 → 打开系统分享面板 → 选择「SearchSelection」→ 选择搜索引擎。
 
 > 菜单中显示的名称取决于系统与调用方应用；搜索入口是否出现，取决于系统版本及该应用是否提供「搜索」菜单项。
 
@@ -116,7 +116,7 @@ cp build-profile-example.json5 build-profile.json5
 - **搜索入口**：`SearchAbility` 处理 `ohos.want.action.search`，依次尝试从 `query`、`key_text`、`text`、`selectedText`、`keyword`、`content`、`searchText` 参数中读取文本，最后回退到 `uri`。
 - **分享入口**：`ShareExtAbility` 处理 `ohos.want.action.sendData`，从共享记录的 `content`、`title`、`uri` 中提取文本。
 - **URL 生成**：对文本执行 `trim()` 和 `encodeURIComponent()`，替换模板中的所有 `%s`。
-- **配置存储**：使用 `@kit.ArkData` 的 `preferences`，存储名为 `sharerunner_skills`。
+- **配置存储**：使用 `@kit.ArkData` 的 `preferences`，存储名为 `searchselection_skills`。
 - **打开方式**：通过 `openLink` 交给系统处理，由系统决定使用哪个浏览器或应用打开。
 
 ## 隐私说明
@@ -133,5 +133,5 @@ cp build-profile-example.json5 build-profile.json5
 
 ## 发布前注意
 
-- 当前 `bundleName` 为占位值 `com.example.sharerunner`，正式发布前请修改为自有包名。
+- 当前 `bundleName` 为占位值 `com.example.searchselection`，正式发布前请修改为自有包名。
 - 请替换应用图标、应用名称和签名配置。

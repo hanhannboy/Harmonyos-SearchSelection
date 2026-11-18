@@ -4,7 +4,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { SearchSkill, SkillRecord, createPresetSkills, QUERY_PLACEHOLDER } from './SkillTypes';
 
-const STORE_NAME = 'sharerunner_skills';
+const STORE_NAME = 'searchselection_skills';
 const KEY_SKILLS = 'skills';
 const TAG = 'SkillStore';
 

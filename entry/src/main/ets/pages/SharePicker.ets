@@ -91,7 +91,7 @@ struct SharePicker {
           Text('还没有技能，先去应用里创建一个吧')
             .fontSize(13)
             .fontColor($r('app.color.text_secondary'))
-          Button('打开 ShareRunner')
+          Button('打开 SearchSelection')
             .fontSize(14)
             .fontColor(Color.White)
             .backgroundColor($r('app.color.accent'))
