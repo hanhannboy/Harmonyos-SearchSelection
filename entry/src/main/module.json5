@@ -1,0 +1,111 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:app_icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "ohos.want.action.home"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SearchAbility",
+        "srcEntry": "./ets/searchability/SearchAbility.ets",
+        "description": "$string:SearchAbility_desc",
+        "icon": "$media:app_icon",
+        "label": "$string:SearchAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "removeMissionAfterTerminate": true,
+        "excludeFromMissions": true,
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.default",
+              "entity.system.browsable"
+            ],
+            "actions": [
+              "ohos.want.action.search"
+            ]
+          },
+          {
+            "entities": [
+              "entity.system.default",
+              "entity.system.browsable"
+            ],
+            "actions": [
+              "ohos.want.action.search"
+            ],
+            "uris": [
+              {
+                "type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "ShareExtAbility",
+        "srcEntry": "./ets/shareext/ShareExtAbility.ets",
+        "type": "share",
+        "exported": true,
+        "description": "$string:ShareExtAbility_desc",
+        "icon": "$media:app_icon",
+        "label": "$string:ShareExtAbility_label",
+        "skills": [
+          {
+            "actions": [
+              "ohos.want.action.sendData"
+            ],
+            "uris": [
+              {
+                "scheme": "file",
+                "utd": "general.text",
+                "maxFileSupported": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      }
+    ]
+  }
+}

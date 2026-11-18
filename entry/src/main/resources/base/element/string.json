@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "ShareRunner 主模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "管理搜索技能"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "文本选择搜索"
+    },
+    {
+      "name": "ShareExtAbility_desc",
+      "value": "接收分享内容并用技能搜索"
+    },
+    {
+      "name": "ShareExtAbility_label",
+      "value": "ShareRunner"
+    },
+    {
+      "name": "SearchAbility_desc",
+      "value": "用技能搜索选中的文本"
+    },
+    {
+      "name": "SearchAbility_label",
+      "value": "文本选择搜索"
+    }
+  ]
+}

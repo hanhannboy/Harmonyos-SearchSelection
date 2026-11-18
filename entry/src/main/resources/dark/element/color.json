@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#000000"
+    },
+    {
+      "name": "share_panel_bg",
+      "value": "#1E1E1E"
+    },
+    {
+      "name": "sheet_card_bg",
+      "value": "#333333"
+    },
+    {
+      "name": "text_primary",
+      "value": "#E5E5E5"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#99E5E5E5"
+    },
+    {
+      "name": "accent",
+      "value": "#317AF7"
+    },
+    {
+      "name": "danger",
+      "value": "#E84026"
+    }
+  ]
+}
